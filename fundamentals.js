@@ -78,3 +78,19 @@ let name = 'Marco';
 console.log(`hello ${1}`);
 console.log(`hello ${"name"}`);
 console.log(`hello ${name}`);
+
+// Interactiona
+
+//alert("Hello");  Navegador apenas
+
+//let result = prompt('Digite um numero'); navegador apenas
+
+const readline = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout,
+});
+
+readline.question(`Qual seu nome? `, name => {
+    console.log(`Hi ${name}!`);
+    readline.close();
+})
